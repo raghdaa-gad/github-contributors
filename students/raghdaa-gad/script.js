@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
             count++;
             if (clickCountDisplay) {
                 clickCountDisplay.textContent = count;
+                clickCountDisplay.classList.remove('pop');
+                void clickCountDisplay.offsetWidth; // restart animation
+                clickCountDisplay.classList.add('pop');
             }
         });
     });
